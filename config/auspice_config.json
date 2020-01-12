@@ -1,0 +1,53 @@
+{
+  "title": "Phylogeny of SARS-like betacoronaviruses including novel coronavirus from Wuhan using data generated the Shanghai Public Health Clinical Center & School of Public Health, Fudan University, the National Institute for Viral Disease Control and Prevention, China CDC, the Institute of Pathogen Biology, Chinese Academy of Medical Sciences & Peking Union Medical College and the Wuhan Institute of Virology, Chinese Academy of Sciences",
+  "maintainers": [
+    {"name": "Trevor Bedford", "url": "http://bedford.io/team/trevor-bedford/"}
+  ],
+  "build_url": "https://github.com/blab/sars-like-cov",
+  "colorings": [
+    {
+      "key": "virus_species",
+      "title": "virus species",
+      "type": "categorical"
+    },
+    {
+      "key": "host",
+      "title": "host",
+      "type": "categorical"
+    },
+    {
+      "key": "country",
+      "title": "country",
+      "type": "categorical"
+    },
+    {
+      "key": "region",
+      "title": "region",
+      "type": "categorical"
+    },
+    {
+      "key": "author",
+      "title": "authors",
+      "type": "categorical"
+    }
+  ],
+  "geo_resolutions": [
+    "country"
+  ],
+  "display_defaults": {
+    "color_by": "virus_species",
+    "map_triplicate": true
+  },
+  "filters": [
+    "virus_species",
+    "host",
+    "country",
+    "region",
+    "author"
+  ],
+  "panels": [
+    "tree",
+    "map",
+    "entropy"
+  ]
+}

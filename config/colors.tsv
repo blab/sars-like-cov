@@ -1,0 +1,23 @@
+virus_species	Severe_acute_respiratory_syndrome_related_coronavirus	#59A3AA
+virus_species	Wuhan_coronavirus	#DC2F24
+
+host	bat	#511EA8
+host	badger	#3F44C8
+host	civet	#3E5BD0
+host	chimpanzee	#4270CE
+host	dog	#4784C8
+host	hedgehog	#4E95BD
+host	mouse	#57A1AD
+host	rabbit	#61AB9C
+host	rat	#6DB38A
+host	swine	#7BB879
+host	alpaca	#9BBE5C
+host	antelope	#ABBD51
+host	buffalo	#BBBC49
+host	cattle	#CBB843
+host	deer	#D6AF3E
+host	camel	#DFA43B
+host	giraffe	#E69537
+host	horse	#E67F33
+host	yak	#E4662E
+host	human	#DC2F24
