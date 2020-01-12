@@ -2,7 +2,7 @@
 # (or at least out of _this_ git repo).
 results/
 build/
-
+data/sars-like-cov.fasta
 
 # Sensitive environment variables
 environment*

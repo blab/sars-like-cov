@@ -37,10 +37,10 @@ rule parse:
     input:
         sequences = rules.download.output.sequences
     output:
-        sequences = "results/sequences.fasta",
-        metadata = "results/metadata.tsv"
+        sequences = "data/sequences.fasta",
+        metadata = "data/metadata.tsv"
     params:
-        fasta_fields = "strain virus accession date region country segment host virus_species originating_lab submitting_lab authors url title journal paper_url",
+        fasta_fields = "strain virus accession date region country segment host virus_type originating_lab submitting_lab authors url title journal paper_url",
         prettify_fields = "region country host"
     shell:
         """
