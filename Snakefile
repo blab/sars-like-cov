@@ -105,10 +105,30 @@ rule align:
             --remove-reference
         """
 
+rule mask:
+    message:
+        """
+        Mask initial bases in alignment
+          - masking {params.mask_length}
+        """
+    input:
+        alignment = rules.align.output.alignment
+    output:
+        alignment = "results/aligned_masked.fasta"
+    params:
+        mask_length = 15
+    shell:
+        """
+        python3 scripts/mask-alignment.py \
+            --alignment {input.alignment} \
+            --mask-length {params.mask_length} \
+            --output {output.alignment}
+        """
+
 rule tree:
     message: "Building tree"
     input:
-        alignment = rules.align.output.alignment
+        alignment = rules.mask.output.alignment
     output:
         tree = "results/tree_raw.nwk"
     shell:
@@ -125,7 +145,7 @@ rule refine:
         """
     input:
         tree = rules.tree.output.tree,
-        alignment = rules.align.output,
+        alignment = rules.mask.output,
         metadata = rules.parse.output.metadata
     output:
         tree = "results/tree.nwk",
@@ -162,7 +182,7 @@ rule ancestral:
     message: "Reconstructing ancestral sequences and mutations"
     input:
         tree = rules.prune_outgroup.output.tree,
-        alignment = rules.align.output
+        alignment = rules.mask.output
     output:
         node_data = "results/nt_muts.json"
     params:
