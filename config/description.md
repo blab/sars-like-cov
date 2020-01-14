@@ -1,4 +1,4 @@
-This phylogeny shows evolution of SARS-like betacoronaviruses including 6 samples from the novel coronavirus (nCoV) outbreak in Wuhan. Coronaviruses from the Wuhan outbreak are colored in red, while related SARS-like coronaviruses are colored in blue. [Click here to zoom into the nCoV outbreak clade](/sars-like-cov?clade=nCoV).
+This phylogeny shows evolution of SARS-like betacoronaviruses including 6 samples from the novel coronavirus (nCoV) outbreak in Wuhan. Coronaviruses from the Wuhan outbreak are colored in red, while related SARS-like coronaviruses are colored in blue. [Click here to zoom into the nCoV outbreak clade](/groups/blab/sars-like-cov?clade=nCoV).
 
 There were 5 SNPs present in the Wuhan samples in the first 11 bases of the alignment that were masked as likely sequencing artifacts. Additionally, sample BetaCoV/Wuhan/IVDC-HB-05/2019 may have sequencing artifacts that make it appear more diverged than it actually is.
 
