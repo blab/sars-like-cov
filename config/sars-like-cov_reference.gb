@@ -36,10 +36,10 @@ FEATURES             Location/Qualifiers
                      /collected_by="R. Graham"
                      /identified_by="B. Yount"
      5'UTR           1..265
-     CDS             join(266..13399,13399..21486)
+     CDS             13399..21486
                      /ribosomal_slippage
                      /codon_start=1
-                     /gene="ORF1ab"
+                     /gene="ORF1b"
                      /protein_id="AYV99801.1"
                      /translation="MESLVLGVNEKTHVQLSLPVLQVRDVLVRGFGDSVEEALSEARE
                      HLKNGTCGLVELEKGVLPQLEQPYVFIKRSDALSTNHGHKVVELVAEMDGIQYGRSGI

@@ -1,5 +1,5 @@
-virus_type	Severe_acute_respiratory_syndrome_related_coronavirus	#59A3AA
-virus_type	Wuhan_coronavirus	#DC2F24
+virus_type	SARS_related_coronavirus	#59A3AA
+virus_type	novel_coronavirus	#DC2F24
 
 host	bat	#511EA8
 host	badger	#3F44C8
