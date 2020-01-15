@@ -2,7 +2,6 @@
 # (or at least out of _this_ git repo).
 results/
 build/
-auspice/
 data/sars-like-cov.fasta
 
 # Sensitive environment variables
