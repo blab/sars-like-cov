@@ -116,12 +116,14 @@ rule mask:
     output:
         alignment = "results/aligned_masked.fasta"
     params:
-        mask_length = 15
+        mask_from_beginning = 15,
+        mask_from_end = 15,
     shell:
         """
         python3 scripts/mask-alignment.py \
             --alignment {input.alignment} \
-            --mask-length {params.mask_length} \
+            --mask-from-beginning {params.mask_from_beginning} \
+            --mask-from-end {params.mask_from_end} \
             --output {output.alignment}
         """
 

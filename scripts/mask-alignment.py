@@ -13,16 +13,19 @@ if __name__ == '__main__':
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("--alignment", required=True, help="FASTA file of aligment")
-    parser.add_argument("--mask-length", required=True, help="number of bases to mask from start")
+    parser.add_argument("--mask-from-beginning", required=True, help="number of bases to mask from start")
+    parser.add_argument("--mask-from-end", required=True, help="number of bases to mask from end")
     parser.add_argument("--output", required=True, help="FASTA file of output aligment")
     args = parser.parse_args()
 
-    length = int(args.mask_length)
+    beginning = int(args.mask_from_beginning)
+    end = int(args.mask_from_end)
 
     with open(args.output, 'w') as outfile:
         for record in Bio.SeqIO.parse(args.alignment, 'fasta'):
             seq = str(record.seq)
-            start = "N" * length
-            end = seq[length:]
-            record.seq = Seq(start + end)
+            start = "N" * beginning
+            middle = seq[beginning:-end]
+            end = "N" * end
+            record.seq = Seq(start + middle + end)
             Bio.SeqIO.write(record, outfile, 'fasta')
