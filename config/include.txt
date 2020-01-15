@@ -1,7 +1,6 @@
 BetaCoV/Wuhan/IPBCAMS-WH-01/2019
 BetaCoV/Wuhan/IVDC-HB-01/2019
 BetaCoV/Wuhan/IVDC-HB-04/2020
-BetaCoV/Wuhan/IVDC-HB-05/2019
 BetaCoV/Wuhan/WIV04/2019
 WH-Human_1
 

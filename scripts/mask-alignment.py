@@ -13,19 +13,27 @@ if __name__ == '__main__':
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("--alignment", required=True, help="FASTA file of aligment")
-    parser.add_argument("--mask-from-beginning", required=True, help="number of bases to mask from start")
-    parser.add_argument("--mask-from-end", required=True, help="number of bases to mask from end")
+    parser.add_argument("--mask-from-beginning", type = int, required=True, help="number of bases to mask from start")
+    parser.add_argument("--mask-from-end", type = int, help="number of bases to mask from end")
+    parser.add_argument("--mask-sites", nargs='+', type = int,  help="list of sites to mask")
     parser.add_argument("--output", required=True, help="FASTA file of output aligment")
     args = parser.parse_args()
 
-    beginning = int(args.mask_from_beginning)
-    end = int(args.mask_from_end)
+    being_length = 0
+    if args.mask_from_beginning:
+        begin_length = args.mask_from_beginning
+    end_length = 0
+    if args.mask_from_end:
+        end_length = args.mask_from_end
 
     with open(args.output, 'w') as outfile:
         for record in Bio.SeqIO.parse(args.alignment, 'fasta'):
             seq = str(record.seq)
-            start = "N" * beginning
-            middle = seq[beginning:-end]
-            end = "N" * end
-            record.seq = Seq(start + middle + end)
+            start = "N" * begin_length
+            middle = seq[begin_length:-end_length]
+            end = "N" * end_length
+            seq_list = list(start + middle + end)
+            for site in args.mask_sites:
+                seq_list[site-1] = "N"
+            record.seq = Seq("".join(seq_list))
             Bio.SeqIO.write(record, outfile, 'fasta')

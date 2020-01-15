@@ -6,7 +6,7 @@ rule files:
     params:
         input_fasta = "data/sars-like-cov.fasta",
         include = "config/include.txt",
-        dropped_strains = "config/dropped_strains.txt",
+        exclude = "config/exclude.txt",
         reference = "config/sars-like-cov_reference.gb",
         clades = "config/clades.tsv",
         auspice_config = "config/auspice_config.json",
@@ -30,6 +30,8 @@ rule download:
             --resolve_method choose_genbank \
             --path $(dirname {output.sequences}) \
             --fstem $(basename {output.sequences} .fasta)
+        sed -i -e 's/Severe_acute_respiratory_syndrome_related_coronavirus/SARS related coronavirus/g' data/sars-like-cov.fasta
+        sed -i -e 's/Wuhan_coronavirus/novel coronavirus/g' data/sars-like-cov.fasta
         """
 
 rule parse:
@@ -64,7 +66,7 @@ rule filter:
         sequences = rules.parse.output.sequences,
         metadata = rules.parse.output.metadata,
         include = files.include,
-        exclude = files.dropped_strains
+        exclude = files.exclude
     output:
         sequences = "results/filtered.fasta"
     params:
@@ -108,22 +110,26 @@ rule align:
 rule mask:
     message:
         """
-        Mask initial bases in alignment
-          - masking {params.mask_length}
+        Mask bases in alignment
+          - masking {params.mask_from_beginning} from beginning
+          - masking {params.mask_from_end} from end
+          - masking other sites: {params.mask_sites}
         """
     input:
         alignment = rules.align.output.alignment
     output:
-        alignment = "results/aligned_masked.fasta"
+        alignment = "results/masked.fasta"
     params:
         mask_from_beginning = 15,
         mask_from_end = 15,
+        mask_sites = 18460
     shell:
         """
         python3 scripts/mask-alignment.py \
             --alignment {input.alignment} \
             --mask-from-beginning {params.mask_from_beginning} \
             --mask-from-end {params.mask_from_end} \
+            --mask-sites {params.mask_sites} \
             --output {output.alignment}
         """
 
