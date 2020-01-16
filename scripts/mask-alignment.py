@@ -33,7 +33,8 @@ if __name__ == '__main__':
             middle = seq[begin_length:-end_length]
             end = "N" * end_length
             seq_list = list(start + middle + end)
-            for site in args.mask_sites:
-                seq_list[site-1] = "N"
+            if args.mask_sites:
+                for site in args.mask_sites:
+                    seq_list[site-1] = "N"
             record.seq = Seq("".join(seq_list))
             Bio.SeqIO.write(record, outfile, 'fasta')
