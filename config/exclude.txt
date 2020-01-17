@@ -1,5 +1,6 @@
 # nCoV that has apparently artifactual mutations
 BetaCoV/Wuhan/IVDC-HB-05/2019
+BetaCoV/Kanagawa/1/2020
 
 # SARS genomes that lack good metadata
 A022
@@ -27,6 +28,7 @@ GZ43
 HGZ8L1_A
 HGZ8L1_B
 HGZ8L2
+HKU_36871
 HKU_65806
 HKU_66078
 HSR_1
@@ -107,6 +109,7 @@ ShanghaiQXC1
 ShanghaiQXC2
 Sin845
 Sin847
+Sin3408L
 Sin3725V
 Sin3765V
 SIN2500
@@ -164,4 +167,5 @@ ZJ01
 ZJ02
 ZMY_1
 ZS_A
+ZS_B
 ZS_C

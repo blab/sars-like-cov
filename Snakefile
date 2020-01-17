@@ -31,7 +31,7 @@ rule download:
             --path $(dirname {output.sequences}) \
             --fstem $(basename {output.sequences} .fasta)
         sed -i -e 's/Severe_acute_respiratory_syndrome_related_coronavirus/SARS related coronavirus/g' data/sars-like-cov.fasta
-        sed -i -e 's/Wuhan_coronavirus/novel coronavirus/g' data/sars-like-cov.fasta
+        sed -i -e 's/novel_coronavirus/novel coronavirus/g' data/sars-like-cov.fasta
         """
 
 rule parse:

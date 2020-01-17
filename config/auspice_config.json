@@ -21,11 +21,6 @@
       "type": "categorical"
     },
     {
-      "key": "region",
-      "title": "region",
-      "type": "categorical"
-    },
-    {
       "key": "author",
       "title": "authors",
       "type": "categorical"
@@ -42,7 +37,6 @@
     "virus_type",
     "host",
     "country",
-    "region",
     "author"
   ],
   "panels": [
