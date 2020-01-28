@@ -3,6 +3,7 @@
 results/
 build/
 data/sars-like-cov.fasta
+data/sars-like-cov.fasta-e
 
 # Sensitive environment variables
 environment*

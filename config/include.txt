@@ -7,3 +7,4 @@ WH-Human_1
 bat_SL_CoVZC45
 bat_SL_CoVZXC21
 BtKY72
+BetaCoV/bat/Yunnan/RaTG13/2013
