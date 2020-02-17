@@ -1,5 +1,5 @@
 virus_type	SARS-like CoV	#4274CE
-virus_type	SARS-CoV-1	#CEB541
+virus_type	SARS-CoV	#CEB541
 virus_type	SARS-CoV-2	#DC2F24
 
 host	bat	#4274CE
