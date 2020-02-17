@@ -1,10 +1,16 @@
-BetaCoV/Wuhan/IPBCAMS-WH-01/2019
-BetaCoV/Wuhan/IVDC-HB-01/2019
-BetaCoV/Wuhan/IVDC-HB-04/2020
-BetaCoV/Wuhan/WIV04/2019
-WH-Human_1
+Wuhan/IPBCAMS-WH-01/2019
+Wuhan/IVDC-HB-01/2019
+Wuhan/IVDC-HB-04/2020
+Wuhan/WIV04/2019
+Wuhan-Hu-1/2019
 
 bat_SL_CoVZC45
 bat_SL_CoVZXC21
 BtKY72
-BetaCoV/bat/Yunnan/RaTG13/2013
+bat/Yunnan/RaTG13/2013
+
+pangolin/Guangdong/P2S/2019
+pangolin/Guangxi/P1E/2017
+pangolin/Guangxi/P4L/2017
+pangolin/Guangxi/P5E/2017
+pangolin/Guangxi/P5L/2017

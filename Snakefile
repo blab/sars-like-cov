@@ -4,7 +4,8 @@ rule all:
 
 rule files:
     params:
-        input_fasta = "data/sars-like-cov.fasta",
+        input_sequences = "data/sequences.fasta",
+        input_metadata = "data/metadata.tsv",
         include = "config/include.txt",
         exclude = "config/exclude.txt",
         reference = "config/sars-like-cov_reference.gb",
@@ -15,64 +16,24 @@ rule files:
 
 files = rules.files.params
 
-rule download:
-    message: "Downloading sequences from fauna"
-    output:
-        sequences = "data/sars-like-cov.fasta"
-    params:
-        fasta_fields = "strain virus accession collection_date region country locus host virus_species originating_lab submitting_lab authors url title journal puburls"
-    shell:
-        """
-        python3 ../fauna/vdb/download.py \
-            --database vdb \
-            --virus sarslike \
-            --fasta_fields {params.fasta_fields} \
-            --resolve_method choose_genbank \
-            --path $(dirname {output.sequences}) \
-            --fstem $(basename {output.sequences} .fasta)
-        sed -i -e 's/Severe_acute_respiratory_syndrome_related_coronavirus/SARS related coronavirus/g' data/sars-like-cov.fasta
-        sed -i -e 's/novel_coronavirus/novel coronavirus/g' data/sars-like-cov.fasta
-        """
-
-rule parse:
-    message: "Parsing fasta into sequences and metadata"
-    input:
-        sequences = rules.download.output.sequences
-    output:
-        sequences = "data/sequences.fasta",
-        metadata = "data/metadata.tsv"
-    params:
-        fasta_fields = "strain virus accession date region country segment host virus_type originating_lab submitting_lab authors url title journal paper_url",
-        prettify_fields = "region country host"
-    shell:
-        """
-        augur parse \
-            --sequences {input.sequences} \
-            --output-sequences {output.sequences} \
-            --output-metadata {output.metadata} \
-            --fields {params.fasta_fields} \
-            --prettify-fields {params.prettify_fields}
-        """
-
 rule filter:
     message:
         """
         Filtering to
-          - {params.sequences_per_group} sequence(s) per {params.group_by!s}
           - excluding strains in {input.exclude}
           - minimum genome length of {params.min_length}
         """
     input:
-        sequences = rules.parse.output.sequences,
-        metadata = rules.parse.output.metadata,
+        sequences = files.input_sequences,
+        metadata = files.input_metadata,
         include = files.include,
         exclude = files.exclude
     output:
         sequences = "results/filtered.fasta"
     params:
         group_by = "year",
-        sequences_per_group = 10,
-        min_length = 5000,
+        sequences_per_group = 5,
+        min_length = 5000
     shell:
         """
         augur filter \
@@ -154,7 +115,7 @@ rule refine:
     input:
         tree = rules.tree.output.tree,
         alignment = rules.mask.output,
-        metadata = rules.parse.output.metadata
+        metadata = files.input_metadata
     output:
         tree = "results/tree.nwk",
         node_data = "results/branch_lengths.json"
@@ -243,7 +204,7 @@ rule export:
     message: "Exporting data files for for auspice"
     input:
         tree = rules.prune_outgroup.output.tree,
-        metadata = rules.parse.output.metadata,
+        metadata = files.input_metadata,
         branch_lengths = rules.refine.output.node_data,
         nt_muts = rules.ancestral.output.node_data,
         aa_muts = rules.translate.output.node_data,
