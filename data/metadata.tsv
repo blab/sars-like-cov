@@ -28,7 +28,6 @@ GZ_D	sarslike	AY394980	?	?	Na	genome	Unknown	SARS-CoV	?	?	?	https://www.ncbi.nlm
 GZ02	sarslike	AY390556	2003-XX-XX	China	China	genome	Human	SARS-CoV	?	?	Zhou et al	https://www.ncbi.nlm.nih.gov/nuccore/AY390556	SARS coronavirus GZ02 isolate genome sequence	Unpublished	?
 GZ43	sarslike	AY304490	?	China	Hong Kong	genome	Unknown	SARS-CoV	?	?	Guan et al	https://www.ncbi.nlm.nih.gov/nuccore/AY304490	Isolation and characterization of viruses related to the SARS coronavirus from animals in southern China	Science 302 (5643), 276-278 (2003)	?
 GZ50	sarslike	AY304495	2003-XX-XX	China	Hong Kong	genome	Human	SARS-CoV	?	?	Guan et al	https://www.ncbi.nlm.nih.gov/nuccore/AY304495	Isolation and characterization of viruses related to the SARS coronavirus from animals in southern China	Science 302 (5643), 276-278 (2003)	?
-GZ60	sarslike	AY304491	?	China	Hong Kong	genome	Unknown	SARS-CoV	?	?	Guan et al	https://www.ncbi.nlm.nih.gov/nuccore/AY304491	Isolation and characterization of viruses related to the SARS coronavirus from animals in southern China	Science 302 (5643), 276-278 (2003)	?
 GZ0401	sarslike	AY568539	2004-XX-XX	China	China	genome	Human	SARS-CoV	?	?	Song et al	https://www.ncbi.nlm.nih.gov/nuccore/AY568539	Cross-host evolution of severe acute respiratory syndrome coronavirus in palm civet and human	Proc. Natl. Acad. Sci. U.S.A. 102 (7), 2430-2435 (2005)	?
 GZ0402	sarslike	AY613947	2004-XX-XX	China	China	genome	Human	SARS-CoV	?	?	Song et al	https://www.ncbi.nlm.nih.gov/nuccore/AY613947	Cross-host evolution of severe acute respiratory syndrome coronavirus in palm civet and human	Proc. Natl. Acad. Sci. U.S.A. 102 (7), 2430-2435 (2005)	?
 HC/GZ/32/03	sarslike	AY545918	2003-XX-XX	China	China	genome	Civet	SARS-CoV	?	?	Guan et al	https://www.ncbi.nlm.nih.gov/nuccore/AY545918	An Averted SARS Outbreak?	Unpublished	?
@@ -85,6 +84,7 @@ MA15_ExoN1_mutant	sarslike	FJ882951	2008-11-26	North America	USA	genome	Unknown	
 Modified_Microbial_Nucleic_Acid	sarslike	FV537211	?	?	Na	genome	Unknown	SARS-CoV	?	?	Millar et al	https://www.ncbi.nlm.nih.gov/nuccore/FV537211	Modified Microbial Nucleic Acid	Patent: JP 2009538603-A 1190 12-NOV-2009; Human Genetic Signatures Pty Ltd	?
 NS_1	sarslike	AY508724	?	?	Na	genome	Unknown	SARS-CoV	?	?	Zheng et al	https://www.ncbi.nlm.nih.gov/nuccore/AY508724	SARS coronavirus NS-1 complete genome sequence	Unpublished	?
 P2	sarslike	FJ882963	2004-08-10	North America	USA	genome	Human	SARS-CoV	?	?	Spiro et al	https://www.ncbi.nlm.nih.gov/nuccore/FJ882963	Direct Submission	Submitted (31-MAR-2009) J. Craig Venter Institute, 9704 Medical Center Drive, Rockville, MD 20850, USA	?
+pangolin/Guangdong/1/2020	sarslike	EPI_ISL_410721	2020	China	China	genome	Pangolin	SARS-like CoV	?	?	Shen et al	?	?	?	?
 pangolin/Guangdong/P2S/2019	sarslike	EPI_ISL_410544	2019	China	China	genome	Pangolin	SARS-like CoV	?	?	Jiang et al	?	?	?	?
 pangolin/Guangxi/P1E/2017	sarslike	EPI_ISL_410539	2017	China	China	genome	Pangolin	SARS-like CoV	?	?	Jiang et al	?	?	?	?
 pangolin/Guangxi/P2V/2017	sarslike	EPI_ISL_410542	2017	China	China	genome	Pangolin	SARS-like CoV	?	?	Jiang et al	?	?	?	?

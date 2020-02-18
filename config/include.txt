@@ -9,6 +9,7 @@ bat_SL_CoVZXC21
 BtKY72
 bat/Yunnan/RaTG13/2013
 
+pangolin/Guandong/1/2020
 pangolin/Guangdong/P2S/2019
 pangolin/Guangxi/P1E/2017
 pangolin/Guangxi/P4L/2017
