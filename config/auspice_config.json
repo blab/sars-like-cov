@@ -1,7 +1,8 @@
 {
   "title": "Phylogeny of SARS-like betacoronaviruses including novel coronavirus SARS-CoV-2",
   "maintainers": [
-    {"name": "Trevor Bedford", "url": "http://bedford.io/team/trevor-bedford/"}
+    {"name": "Trevor Bedford", "url": "http://bedford.io/team/trevor-bedford/"},
+    {"name": "Emma Hodcroft", "url": "https://neherlab.org/emma-hodcroft.html"}
   ],
   "build_url": "https://github.com/blab/sars-like-cov",
   "colorings": [
