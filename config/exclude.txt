@@ -2,6 +2,10 @@
 Wuhan/IVDC-HB-05/2019
 Kanagawa/1/2020
 
+# Messes up the rooting because of 1 mutation
+USA/AZ1/2020
+USA/TX1/2020
+
 # SARS genomes that lack good metadata
 GD01
 GZ_A
