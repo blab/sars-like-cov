@@ -8,7 +8,17 @@ The SARS-CoV-2 coronavirus genomes were generously shared by scientists at the S
 
 Background data for this build was sourced [from Genbank via VIPR](https://www.viprbrc.org/brc/vipr_genome_search.spg?method=ShowCleanSearch&decorator=corona). Here, we downloaded all the SARS-like coronaviruses that were more than 5000 bases in length. These sequences are available in the repo at `data/sequences.fasta`.
 
-SARS-CoV-2 novel coronaviruses from Wuhan as well as *bat/Yunnan/RaTG13/2013* and pangolin SARS-like viruses are not included as part of this repo as they are protected by the terms of GISAID sharing. Here, these genomes will need to be supplemented by the user. Please add these as additional strains in `data/sequences.fasta`. Metadata for these viruses already exists in `data/metadata.tsv`.
+The following viruses are not included as part of this repo as they are protected by the terms of GISAID sharing. Here, these genomes will need to be supplemented by the user. Please add these as additional strains in `data/sequences.fasta`. Metadata for these viruses already exists in `data/metadata.tsv`.
+
+* bat/Yunnan/RaTG13/2013
+* bat/Yunnan/RmYN01/2019
+* bat/Yunnan/RmYN02/2019
+* pangolin/Guangdong/1/2020
+* pangolin/Guangdong/P2S/2019
+* pangolin/Guangxi/P5E/2017
+* pangolin/Guangxi/P4L/2017
+* pangolin/Guangxi/P5L/2017
+* pangolin/Guangxi/P1E/2017
 
 ## Building
 

@@ -3,7 +3,6 @@ Wuhan/IVDC-HB-01/2019
 Wuhan/IVDC-HB-04/2020
 Wuhan/WIV04/2019
 Wuhan-Hu-1/2019
-
 USA/IL1/2020
 Nepal/61/2020
 Wuhan/WIV05/2019	
@@ -15,6 +14,8 @@ bat_SL_CoVZC45
 bat_SL_CoVZXC21
 BtKY72
 bat/Yunnan/RaTG13/2013
+bat/Yunnan/RmYN01/2019
+bat/Yunnan/RmYN02/2019
 
 pangolin/Guangdong/1/2020
 pangolin/Guangdong/P2S/2019
